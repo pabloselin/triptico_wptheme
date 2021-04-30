@@ -6,7 +6,7 @@
 	?>	
 	
 	<p>
-		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong>
+		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong> <span id="keycount"></span>
 	</p>
 
 </div>
@@ -27,6 +27,7 @@
 			<div id="triptico_canvas_rug" class="triptico_box">
 				<img src="" alt="IndexP" id="image_performance">
 			</div>
+			<div id="triptico_canvas_rug_right" class="triptico_box"></div>
 		</div>
 		<div id="triptico_canvas_right" class="triptico_box">
 			<div class="inforight">
