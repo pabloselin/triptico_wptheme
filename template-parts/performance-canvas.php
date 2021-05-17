@@ -24,11 +24,12 @@
 		</div>
 		<div class="centerzone">
 			<div id="triptico_canvas_3d" class="triptico_box"></div>
-			<div id="triptico_canvas_rug" class="triptico_box">
-				<canvas id="triptico_squares"></canvas>
-				<img src="" alt="IndexP" id="image_performance">
+			<div id="triptico_bottom">
+				<div id="triptico_canvas_rug" class="triptico_box">
+					<canvas id="triptico_squares"></canvas>
+				</div>
+				<div id="bottomimgs"></div>
 			</div>
-			<div id="triptico_canvas_rug_right" class="triptico_box"></div>
 		</div>
 		<div id="triptico_canvas_right" class="triptico_box">
 			<div class="inforight">
