@@ -6,7 +6,7 @@
 	?>	
 	
 	<p>
-		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong> <span id="keycount"></span>
+		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong> <span id="keycount"></span> <span id="keyzone"></span>
 	</p>
 
 </div>
