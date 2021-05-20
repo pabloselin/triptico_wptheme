@@ -27,6 +27,9 @@
 			<div id="triptico_bottom">
 				<div id="triptico_canvas_rug" class="triptico_box">
 					<canvas id="triptico_squares"></canvas>
+					<div id="centerimg">
+						<div class="centerimgimg"></div>
+					</div>
 				</div>
 				<div id="bottomimgs"></div>
 			</div>
