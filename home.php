@@ -17,6 +17,8 @@ get_header('minimal');
 
 	<main id="primary-home" class="site-main">
 
+        <h1><?php echo bloginfo('name');?></h1>
+
         <section class="performance-items">
 		<?php 
             $args = array(
@@ -27,12 +29,25 @@ get_header('minimal');
             $perfos = get_posts($args);
             if($perfos) {
                 foreach($perfos as $perfo) {
+                    $imgs = triptico_getperfimgs($perfo->ID);
+                    //var_dump($imgs);
                     ?>
 
                         <div class="performance-item-link">
+                            <?php if($imgs):?>
+                                <div class="imgs">
+                                    <?php foreach($imgs as $img) {
+                                        $imgurl = TRI_IMGURL . '/' . $img;
+                                        ?>
+                                            <img src="<?php echo $imgurl;?>" alt="<?php echo $img;?>">
+                                        <?php
+                                    }?>
+                                </div>
+                            <?php endif;?>
                             <a href="<?php echo get_permalink($perfo->ID);?>">
                                 <?php echo $perfo->post_title;?>
                             </a>
+
                         </div>
 
                     <?php

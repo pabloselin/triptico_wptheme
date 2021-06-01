@@ -1,18 +1,53 @@
 body {
-	background-color: transparent !important;
+	background-color: #333;
+}
+
+.home h1 {
+	text-align: center;
+	color: white;
 }
 
 .performance-items {
 	display: flex;
-	max-width: 960px;
+	max-width: 740px;
 	margin: 12px auto;
+	flex-wrap: wrap;
 }
 
 .performance-item-link {
 	padding: 12px;
 	background-color: #f0f0f0;
 	margin: 6px;
-	width: 250px;
+	width: 350px;
+	height: 200px;
+	position: relative;
+}
+
+.performance-item-link a {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.performance-item-link img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	top: 0;
+	left: 0;
+	transition: opacity 0.2s ease-in;
+}
+
+.performance-item-link:hover img {
+	opacity: 0.3;
 }
 
 #threeDcanvases {
