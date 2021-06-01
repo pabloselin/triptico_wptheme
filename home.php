@@ -17,7 +17,29 @@ get_header('minimal');
 
 	<main id="primary-home" class="site-main">
 
-		<div id="triptico_fiber"><!-- aqui va el js y el 3D--></div>
+        <section class="performance-items">
+		<?php 
+            $args = array(
+                'post_type' => 'performance',
+                'numberposts' => -1
+            );
+
+            $perfos = get_posts($args);
+            if($perfos) {
+                foreach($perfos as $perfo) {
+                    ?>
+
+                        <div class="performance-item-link">
+                            <a href="<?php echo get_permalink($perfo->ID);?>">
+                                <?php echo $perfo->post_title;?>
+                            </a>
+                        </div>
+
+                    <?php
+                }
+            }
+        ?>
+        </section>
 
 	</main><!-- #main -->
 

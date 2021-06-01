@@ -23,7 +23,10 @@
 		</div>
 		</div>
 		<div class="centerzone">
-			<div id="triptico_canvas_3d" class="triptico_box"></div>
+			<div id="threeDcanvases">
+				<canvas id="triptico_canvas_3d" class="triptico_box"></canvas>
+				<canvas id="triptico_canvas_3d_overlay" class="triptico_box"></canvas>
+			</div>
 			<div id="triptico_bottom">
 				<div id="triptico_canvas_rug" class="triptico_box">
 					<canvas id="triptico_squares"></canvas>
