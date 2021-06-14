@@ -27,10 +27,10 @@ get_header('minimal');
             );
 
             $perfos = get_posts($args);
+
             if($perfos) {
                 foreach($perfos as $perfo) {
                     $imgs = triptico_getperfimgs($perfo->ID);
-                    //var_dump($imgs);
                     ?>
 
                         <div class="performance-item-link">

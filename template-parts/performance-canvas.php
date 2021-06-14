@@ -24,8 +24,7 @@
 		</div>
 		<div class="centerzone">
 			<div id="threeDcanvases">
-				<canvas id="triptico_canvas_3d" class="triptico_box"></canvas>
-				<canvas id="triptico_canvas_3d_overlay" class="triptico_box"></canvas>
+				<div id="triptico_canvas_3d" class="triptico_box"></div>
 			</div>
 			<div id="triptico_bottom">
 				<div id="triptico_canvas_rug" class="triptico_box">
