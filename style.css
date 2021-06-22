@@ -952,12 +952,13 @@ body {
 }
 
 .performance-item-link {
-	padding: 12px;
+	padding: 0;
 	background-color: #f0f0f0;
 	margin: 6px;
 	width: 350px;
 	height: 200px;
 	position: relative;
+	overflow: hidden;
 }
 
 .performance-item-link a {
@@ -973,18 +974,19 @@ body {
 	font-weight: bold;
 }
 
+.performance-item-link .imgs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .performance-item-link img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	opacity: 0.1;
-	top: 0;
-	left: 0;
-	transition: opacity 0.2s ease-in;
+	width: 28px;
+	height: 20px;
+	flex-grow: 4;
 }
 
 .performance-item-link:hover img {
-	opacity: 0.3;
+	opacity: 1;
 }
 
 #threeDcanvases {
