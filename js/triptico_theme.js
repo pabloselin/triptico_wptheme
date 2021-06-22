@@ -36,3 +36,11 @@ let performances = document.querySelectorAll(".performance-item-link .imgs");
 for (let i = 0; i < performances.length; i++) {
     shuffle(performances[i].children);
 }
+
+//Menu Toggle
+let menuToggle = document.getElementById("menuToggle");
+let mainMenu = document.getElementById("main-nav");
+
+menuToggle.addEventListener("click", function () {
+    mainMenu.classList.toggle("active");
+});

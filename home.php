@@ -12,12 +12,10 @@
  * @package _s
  */
 
-get_header('minimal');
+get_header();
 ?>
 
 	<main id="primary-home" class="site-main">
-
-        <h1><?php echo bloginfo('name');?></h1>
 
         <section class="performance-items">
 		<?php 
@@ -34,6 +32,7 @@ get_header('minimal');
                     ?>
 
                         <div class="performance-item-link">
+                            <a href="<?php echo get_permalink($perfo->ID);?>">
                             <?php if($imgs):?>
                                 <div class="imgs">
                                     <?php for($i = 0; $i < 200; $i++) {
@@ -47,8 +46,19 @@ get_header('minimal');
                                     }?>
                                 </div>
                             <?php endif;?>
-                            <a href="<?php echo get_permalink($perfo->ID);?>">
-                                <?php echo $perfo->post_title;?>
+                            
+                                <div class="text-info">
+                                    <h1><?php echo $perfo->post_title;?></h1>
+                                    <?php 
+                                    $datestart = get_post_meta($perfo->ID, '_tri_start_perfo', true);
+                                    $dateend = get_post_meta($perfo->ID, '_tri_end_perfo', true);
+                                    $duracion = get_post_meta($perfo->ID, '_tri_length_perfo', true);
+                                    ?>  
+                                    
+                                    <p>
+                                        <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong> <span id="keycount"></span> <span id="keyzone"></span>
+                                    </p>
+                                </div>
                             </a>
 
                         </div>

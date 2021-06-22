@@ -8,8 +8,10 @@
 	<p>
 		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong> <span id="keycount"></span> <span id="keyzone"></span>
 	</p>
-
 </div>
+
+<?php get_template_part('template-parts/main-nav');?>
+
 <div id="triptico_performance_wrapper">
 	<div id="triptico_performance_visualization">
 		<canvas id="triptico_canvas">

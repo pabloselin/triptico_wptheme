@@ -7,7 +7,7 @@
  * @package _s
  */
 
-get_header('minimal');
+get_header();
 ?>
 
 	<main id="primary" class="site-main">

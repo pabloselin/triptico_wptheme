@@ -626,94 +626,54 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
-	display: block;
+nav#main-nav {
+	opacity: 0;
+	top: -100%;
+	transition: all ease-in 0.4s;
 	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
+	height: 100%;
 	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	padding: 36px;
+	z-index: 1000;
 }
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+nav#main-nav .menu ul {
+	padding: 0;
+	margin: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	display: block;
-	left: auto;
+nav#main-nav .menu ul li {
+	list-style: none;
+	margin: 0 0 24px 0;
+	padding: 0;
 }
 
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
+nav#main-nav .menu ul li a {
+	color: white;
+	font-size: 36px;
+	font-weight: bold;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+nav#main-nav.active {
+	top: 0;
+	opacity: 1;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-}
-
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-	display: flex;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	flex: 1 0 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	text-align: end;
-	flex: 1 0 50%;
+#menuToggle {
+	position: fixed;
+	bottom: 12px;
+	right: 12px;
+	color: white;
+	font-size: 32px;
+	z-index: 1010;
+	padding: 6px;
+	text-align: center;
+	cursor: pointer;
 }
 
 /* Posts and pages
@@ -740,6 +700,26 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-content {
+	color: white;
+	font-size: 24px;
+	padding: 32px;
+}
+
+.entry-content a {
+	color: white;
+}
+
+h1.site-title {
+	color: white;
+	text-align: center;
+}
+
+h1.site-title a {
+	color: white;
+	text-decoration: none;
 }
 
 /* Comments
@@ -952,26 +932,47 @@ body {
 }
 
 .performance-item-link {
-	padding: 0;
+	padding: 0 0 60px 0;
 	background-color: #f0f0f0;
 	margin: 6px;
 	width: 350px;
-	height: 200px;
+	height: 260px;
 	position: relative;
 	overflow: hidden;
 }
 
 .performance-item-link a {
 	position: absolute;
-	left: 12px;
-	top: 12px;
+	left: 0;
+	top: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 10;
 	color: white;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-weight: bold;
+	font-size: 12px;
+}
+
+.performance-item-link .text-info {
+	height: 60px;
+	background-color: #000;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 12px;
+}
+
+.performance-item-link .text-info h1 {
+	font-size: 13px;
+	margin: 0;
+	text-align: left;
+}
+
+.performance-item-link .text-info p {
+	margin: 0;
+	padding: 0;
 }
 
 .performance-item-link .imgs {
