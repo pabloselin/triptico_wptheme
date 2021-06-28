@@ -1,12 +1,18 @@
 <div class="triptico_performance_header">
 	<?php 
+	
 	$datestart = get_post_meta($post->ID, '_tri_start_perfo', true);
 	$dateend = get_post_meta($post->ID, '_tri_end_perfo', true);
 	$duracion = get_post_meta($post->ID, '_tri_length_perfo', true);
+	$firstfile = get_post_meta($post->ID, '_tri_picked_sensor_files_left', true)[0];
+    $epoch = intval(substr($firstfile, 0, 10));
+    $date_file = new DateTime("@$epoch");
+    $datestart_format = $date_file->format('j F Y - H:i');
+	
 	?>	
 	
 	<p>
-		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo date('d/m/Y - H:i(e)', $datestart);?></strong> - Duración: <strong><?php echo $duracion;?> minutos</strong> <span id="keycount"></span> <span id="keyzone"></span>
+		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo $datestart_format;?></strong> </strong> <span id="keycount"></span> <span id="keyzone"></span>
 	</p>
 </div>
 
