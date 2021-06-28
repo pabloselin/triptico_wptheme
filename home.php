@@ -38,7 +38,7 @@ get_header();
                                     <?php for($i = 0; $i < 200; $i++) {
                                         //echo $i%count($imgs);
                                         
-                                        $imgurl = TRI_IMGURL . '/' . $imgs[($i%count($imgs))];
+                                        $imgurl = $imgs[($i%count($imgs))];
                                         
                                         ?>
                                             <img src="<?php echo $imgurl;?>" alt="<?php echo $img;?>">

@@ -13,6 +13,7 @@
 <?php get_template_part('template-parts/main-nav');?>
 
 <div id="triptico_performance_wrapper">
+	<div id="loading"><p>...</p></div>
 	<div id="triptico_performance_visualization">
 		<canvas id="triptico_canvas">
 			

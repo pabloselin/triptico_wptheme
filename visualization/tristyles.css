@@ -273,4 +273,57 @@ header.entry-header {
 	margin: 0;
 }
 
+div#loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+div#loading p {
+	animation-name: bounce;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	color: white;
+	font-size: 48px;
+}
+
+div#loading.hidden {
+	display: none;
+	opacity: 0;
+	top: -100%;
+	left: -100%;
+	animation-name: hide;
+	animation-duration: 1s;
+}
+
+@keyframes hide {
+	from {
+		top: 0;
+	}
+	to {
+		top: -100%;
+		opacity: 0;
+	}
+}
+
+@keyframes bounce {
+	from {
+		transform: scale(1.4);
+		opacity: 0.4;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 /*# sourceMappingURL=tristyles.css.map */
