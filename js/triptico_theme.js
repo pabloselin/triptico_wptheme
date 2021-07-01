@@ -43,4 +43,10 @@ let mainMenu = document.getElementById("main-nav");
 
 menuToggle.addEventListener("click", function () {
     mainMenu.classList.toggle("active");
+    if(mainMenu.classList.contains("active")) {
+        menuToggle.innerHTML = '<span class="top">cerrar</span><span class="bottom">xxx</span>';
+    } else {
+        menuToggle.innerHTML = '<span class="top">menú</span><span class="bottom">===</span>'
+    }
+    
 });

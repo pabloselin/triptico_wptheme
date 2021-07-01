@@ -25,8 +25,10 @@
 
 <?php get_template_part('template-parts/main-nav');?>
 
+<?php if(!is_singular('performance')){?>
 <header>
     <h1 class="site-title"><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
 </header>
+<?php };?>
 
 <div id="page" class="site">
