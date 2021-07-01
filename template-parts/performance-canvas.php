@@ -16,8 +16,6 @@
 	</p>
 </div>
 
-<?php get_template_part('template-parts/main-nav');?>
-
 <div id="triptico_performance_wrapper">
 	<div id="loading"><p>...</p></div>
 	<div id="triptico_performance_visualization">
@@ -26,10 +24,10 @@
 		</canvas>
 		<div id="triptico_canvas_left" class="triptico_box">
 			<div class="infoleft">
-			<strong>Mano izquierda</strong>
+				<strong>Mano izquierda</strong>
 			<div id="infozones_left">
-			</div>		
-		</div>
+			</div>
+			</div>
 		</div>
 		<div class="centerzone">
 			<div id="threeDcanvases">
@@ -53,4 +51,3 @@
 			</div>
 		</div>
 	</div>
-</div>
