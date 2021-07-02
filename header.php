@@ -27,8 +27,15 @@
 
 <?php if(!is_singular('performance')){?>
 <header>
-    <h1 class="site-title"><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
+    <h1 class="site-title">
+	<?php if(is_page()):?>
+		<?php echo $post->post_title;?>
+	<?php else:?>
+			<a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a>
+			<?php 
+		endif;
+	};?>
+	</h1>
 </header>
-<?php };?>
 
 <div id="page" class="site">
