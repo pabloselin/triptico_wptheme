@@ -27,6 +27,21 @@
 	color: white;
 	font-size: 24px;
 	padding: 32px;
+	@media screen and (max-width: 768px) {
+			font-size: 18px;
+			padding: 12px;
+			max-width: 100%;
+			overflow-x: hidden;
+			ul {
+				margin-left: 0;
+				li {
+					margin-left: 12px;
+				}
+			}
+			a {
+				word-break: break-all;
+			}
+	}
 
 	a {
 		color: white;
@@ -36,6 +51,7 @@
 h1.site-title {
 	color: white;
 	text-align: center;
+	text-transform: uppercase;
 	a {
 		color: white;
 		text-decoration: none;
@@ -43,6 +59,43 @@ h1.site-title {
 }
 
 .entry-content {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
+
+	.wp-block-cover {
+		margin-left: -100px;
+		margin-right: -100px;
+		width: auto;
+	}
+
+	.wp-block-cover p {
+		font-weight: 700;
+	}
+
+	a {
+		text-decoration: none;
+		border-bottom: 1px dashed #f0f0f0;
+		&:hover {
+			border-bottom-style: solid;
+		}
+	}
+
+	figcaption {
+		font-size: 19px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.wp-block-cover {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			div.wp-block-cover__inner-container {
+				p {
+					font-size: 26px;
+				}
+			}
+		}
+
+	
+	}
 }

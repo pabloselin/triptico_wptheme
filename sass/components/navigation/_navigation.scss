@@ -19,6 +19,10 @@ nav#main-nav {
 			color: white;
 			text-decoration: none;
 		}
+
+		@media screen and (max-width: 768px) {
+			font-size: 48px;
+		}
 	}
 
 	ul.menu {
