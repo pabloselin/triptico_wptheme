@@ -22,32 +22,49 @@
 		<canvas id="triptico_canvas">
 			
 		</canvas>
-		<div id="triptico_canvas_left" class="triptico_box">
+		<div id="triptico_canvas_left" class="triptico_box canvasexpander">
 			<div class="infoleft">
 				<strong>Mano izquierda</strong>
 			<div id="infozones_left">
 			</div>
 			</div>
+			<span class="buttonexpand" data-expand="triptico_canvas_left">
+					<i class="lni lni-frame-expand"></i>
+				</span>
 		</div>
-		<div class="centerzone">
+		<div class="centerzone canvasexpander" id="centerCanvasWidth">
 			<div id="threeDcanvases">
 				<div id="triptico_canvas_3d" class="triptico_box"></div>
+				
+				<span class="buttonexpand" data-expand="centerCanvasWidth">
+					<i class="lni lni-frame-expand"></i>
+				</span>
+
 			</div>
 			<div id="triptico_bottom">
-				<div id="triptico_canvas_rug" class="triptico_box">
+				<div id="triptico_canvas_rug" class="triptico_box canvasexpander">
 					<canvas id="triptico_squares"></canvas>
 					<div id="centerimg">
 						<div class="centerimgimg"></div>
 					</div>
+
+				<!-- <span class="buttonexpand" data-expand="triptico_canvas_rug">
+					<i class="lni lni-frame-expand"></i>
+				</span> -->
+					
 				</div>
 				<div id="bottomimgs"></div>
+				
 			</div>
 		</div>
-		<div id="triptico_canvas_right" class="triptico_box">
+		<div id="triptico_canvas_right" class="triptico_box canvasexpander">
 			<div class="inforight">
 				<strong>Mano derecha</strong>
 				<div id="infozones_right">
 				</div>
 			</div>
+			<span class="buttonexpand" data-expand="triptico_canvas_right">
+					<i class="lni lni-frame-expand"></i>
+			</span>
 		</div>
 	</div>

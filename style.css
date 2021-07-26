@@ -690,6 +690,24 @@ nav#main-nav.active {
 	opacity: 1;
 }
 
+#infoToggle {
+	position: fixed;
+	bottom: 12px;
+	right: 120px;
+	color: #555;
+	font-size: 24px;
+	font-weight: bold;
+	z-index: 1010;
+	cursor: pointer;
+	border: 1px solid #555;
+	padding: 3px 12px;
+}
+
+#infoToggle:hover {
+	color: white;
+	background-color: #444;
+}
+
 #menuToggle {
 	position: fixed;
 	bottom: 12px;
@@ -710,6 +728,26 @@ nav#main-nav.active {
 
 #menuToggle span.top {
 	font-size: 18px;
+}
+
+#infoZone {
+	opacity: 0;
+	top: -100%;
+	transition: all ease-in 0.4s;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 36px;
+	z-index: 100;
+	text-align: center;
+}
+
+#infoZone.active {
+	top: 0;
+	opacity: 1;
 }
 
 /* Posts and pages
@@ -1153,15 +1191,49 @@ header.entry-header {
 	height: 100%;
 }
 
+#triptico_canvas_left.active {
+	width: 100%;
+}
+
+#triptico_canvas_left.active .buttonexpand {
+	bottom: 72px;
+}
+
 #triptico_canvas_right {
 	width: 20%;
 	height: 100%;
+}
+
+#triptico_canvas_right.active {
+	width: 100%;
 }
 
 .centerzone {
 	width: 60%;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.centerzone.active {
+	width: 100%;
+}
+
+.centerzone.active #threeDcanvases {
+	top: 0;
+	height: 100vh;
+	position: absolute;
+}
+
+.centerzone.active #threeDcanvases .buttonexpand {
+	bottom: 72px;
+}
+
+.centerzone.active #threeDcanvases #triptico_canvas_3d {
+	height: 100vh;
+}
+
+body.expandedCanvas .canvasexpander:not(.active) {
+	display: none;
 }
 
 #threeDcanvases {
@@ -1201,6 +1273,17 @@ header.entry-header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+}
+
+#triptico_canvas_rug .buttonexpand {
+	bottom: 72px;
+}
+
+#triptico_canvas_rug.active {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #centerimg {
@@ -1342,6 +1425,34 @@ div#loading.hidden {
 		transform: scale(1);
 		opacity: 1;
 	}
+}
+
+.buttonexpand {
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.buttonexpand i {
+	font-size: 24px;
+	color: #ccc;
+}
+
+.buttonexpand i:hover {
+	color: white;
+}
+
+#triptico_canvas_left .buttonexpand {
+	bottom: 72px;
+	left: 6px;
+}
+
+#triptico_canvas_right .buttonexpand {
+	bottom: 72px;
 }
 
 /*# sourceMappingURL=style.css.map */

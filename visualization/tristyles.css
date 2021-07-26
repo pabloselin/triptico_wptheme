@@ -135,15 +135,49 @@ header.entry-header {
 	height: 100%;
 }
 
+#triptico_canvas_left.active {
+	width: 100%;
+}
+
+#triptico_canvas_left.active .buttonexpand {
+	bottom: 72px;
+}
+
 #triptico_canvas_right {
 	width: 20%;
 	height: 100%;
+}
+
+#triptico_canvas_right.active {
+	width: 100%;
 }
 
 .centerzone {
 	width: 60%;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.centerzone.active {
+	width: 100%;
+}
+
+.centerzone.active #threeDcanvases {
+	top: 0;
+	height: 100vh;
+	position: absolute;
+}
+
+.centerzone.active #threeDcanvases .buttonexpand {
+	bottom: 72px;
+}
+
+.centerzone.active #threeDcanvases #triptico_canvas_3d {
+	height: 100vh;
+}
+
+body.expandedCanvas .canvasexpander:not(.active) {
+	display: none;
 }
 
 #threeDcanvases {
@@ -183,6 +217,17 @@ header.entry-header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+}
+
+#triptico_canvas_rug .buttonexpand {
+	bottom: 72px;
+}
+
+#triptico_canvas_rug.active {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #centerimg {
@@ -324,6 +369,34 @@ div#loading.hidden {
 		transform: scale(1);
 		opacity: 1;
 	}
+}
+
+.buttonexpand {
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.buttonexpand i {
+	font-size: 24px;
+	color: #ccc;
+}
+
+.buttonexpand i:hover {
+	color: white;
+}
+
+#triptico_canvas_left .buttonexpand {
+	bottom: 72px;
+	left: 6px;
+}
+
+#triptico_canvas_right .buttonexpand {
+	bottom: 72px;
 }
 
 /*# sourceMappingURL=tristyles.css.map */

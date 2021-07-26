@@ -9,6 +9,17 @@
 		);
 	?>
 </nav>
+
+<div id="infoZone">
+	INFO GOES HERE
+</div>
+
+<?php if(is_singular('performance')):?>
+	
+	<div id="infoToggle">i</div>
+
+<?php endif;?>
+
 <div id="menuToggle">
 	<span class="top">menu</span>
 	<span class="bottom">===</span>

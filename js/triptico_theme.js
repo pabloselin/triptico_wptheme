@@ -43,11 +43,39 @@ let mainMenu = document.getElementById("main-nav");
 
 menuToggle.addEventListener("click", function () {
     mainMenu.classList.toggle("active");
-    console.log('togglemenu');
-    if(mainMenu.classList.contains("active")) {
-        menuToggle.innerHTML = '<span class="top">cerrar</span><span class="bottom">xxx</span>';
+    console.log("togglemenu");
+    if (mainMenu.classList.contains("active")) {
+        menuToggle.innerHTML =
+            '<span class="top">cerrar</span><span class="bottom">xxx</span>';
     } else {
-        menuToggle.innerHTML = '<span class="top">menú</span><span class="bottom">===</span>'
+        menuToggle.innerHTML =
+            '<span class="top">menú</span><span class="bottom">===</span>';
     }
-    
 });
+
+//Info Toggle
+let infoToggle = document.getElementById("infoToggle");
+let infoWindow = document.getElementById("infoZone");
+
+infoToggle.addEventListener("click", function () {
+    infoWindow.classList.toggle("active");
+    if (infoWindow.classList.contains("active")) {
+        infoToggle.innerHTML = "x";
+    } else {
+        infoToggle.innerHTML = "i";
+    }
+});
+
+//Expansor
+let buttonExpand = document.querySelectorAll(".buttonexpand");
+
+for (let i = 0; i < buttonExpand.length; i++) {
+    buttonExpand[i].addEventListener("click", function (e) {
+        let canvasID = buttonExpand[i].getAttribute("data-expand");
+        let canvasEl = document.querySelector(`#${canvasID}`);
+        let body = document.querySelector("body");
+        console.log(canvasEl);
+        canvasEl.classList.toggle("active");
+        body.classList.toggle("expandedCanvas");
+    });
+}
