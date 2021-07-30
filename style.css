@@ -692,15 +692,16 @@ nav#main-nav.active {
 
 #infoToggle {
 	position: fixed;
-	bottom: 12px;
-	right: 120px;
-	color: #555;
-	font-size: 24px;
+	bottom: 18px;
+	right: 100px;
+	color: white;
+	font-size: 18px;
 	font-weight: bold;
 	z-index: 1010;
 	cursor: pointer;
-	border: 1px solid #555;
-	padding: 3px 12px;
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 1px 12px;
 }
 
 #infoToggle:hover {
@@ -738,11 +739,16 @@ nav#main-nav.active {
 	height: 100%;
 	position: fixed;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
 	padding: 36px;
 	z-index: 100;
-	text-align: center;
+	text-align: left;
+}
+
+#infoZone div {
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 #infoZone.active {
@@ -1363,6 +1369,20 @@ body.expandedCanvas .canvasexpander:not(.active) {
 	z-index: 10;
 }
 
+.triptico_performance_header .perftitle, .triptico_performance_header .keycountzone {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+	.triptico_performance_header p.perftitle {
+		font-size: 13px;
+		max-width: 200px;
+	}
+	.triptico_performance_header .keycountzone {
+		font-size: 12px;
+	}
+}
+
 .triptico_performance_header h1 {
 	margin: 0;
 	font-weight: normal;
@@ -1370,7 +1390,6 @@ body.expandedCanvas .canvasexpander:not(.active) {
 }
 
 .triptico_performance_header p {
-	display: inline-block;
 	margin: 0;
 }
 

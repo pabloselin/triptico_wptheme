@@ -11,8 +11,11 @@
 	
 	?>	
 	
-	<p>
-		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo $datestart_format;?></strong> </strong> <span id="keycount"></span> <span id="keyzone"></span>
+	<p class="perftitle">
+		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo $datestart_format;?></strong>
+	</p>
+	<p class="keycountzone">
+		<span id="keycount"></span> <span id="keyzone"></span>
 	</p>
 </div>
 
@@ -30,7 +33,7 @@
 			</div>
 			<span class="buttonexpand" data-expand="triptico_canvas_left">
 					<i class="lni lni-frame-expand"></i>
-				</span>
+			</span>
 		</div>
 		<div class="centerzone canvasexpander" id="centerCanvasWidth">
 			<div id="threeDcanvases">

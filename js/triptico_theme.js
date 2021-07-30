@@ -62,7 +62,7 @@ infoToggle.addEventListener("click", function () {
     if (infoWindow.classList.contains("active")) {
         infoToggle.innerHTML = "x";
     } else {
-        infoToggle.innerHTML = "i";
+        infoToggle.innerHTML = "info";
     }
 });
 

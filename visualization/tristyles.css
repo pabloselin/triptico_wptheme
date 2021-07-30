@@ -307,6 +307,20 @@ body.expandedCanvas .canvasexpander:not(.active) {
 	z-index: 10;
 }
 
+.triptico_performance_header .perftitle, .triptico_performance_header .keycountzone {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+	.triptico_performance_header p.perftitle {
+		font-size: 13px;
+		max-width: 200px;
+	}
+	.triptico_performance_header .keycountzone {
+		font-size: 12px;
+	}
+}
+
 .triptico_performance_header h1 {
 	margin: 0;
 	font-weight: normal;
@@ -314,7 +328,6 @@ body.expandedCanvas .canvasexpander:not(.active) {
 }
 
 .triptico_performance_header p {
-	display: inline-block;
 	margin: 0;
 }
 
