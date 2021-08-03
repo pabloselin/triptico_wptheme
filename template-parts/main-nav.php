@@ -21,8 +21,18 @@
 	</div>
 </div>
 
+<div id="infoZonemini">
+	<div>
+		<h3><i class="lni lni-mouse"></i> Controles de mouse</h3>
+		<p><strong>Click izquierdo y arrastrar: </strong> Rotar visualización central</p>
+		<p><strong>Click derecho y arrastrar: </strong> Mover visualización central</p>
+		<p><strong>Scroll (ruedita del mouse o trackpad): </strong> Zoom en visualización central</p>
+	</div>
+</div>
+
 <?php if(is_singular('performance')):?>
 	
+	<div id="soundToggle" title="activar audio"><i class="lni lni-volume-high"></i></div>
 	<div id="infoToggle">info</div>
 
 <?php endif;?>

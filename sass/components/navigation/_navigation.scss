@@ -118,3 +118,28 @@ nav#main-nav.active {
 		opacity: 1;
 	}
 }
+
+#infoZonemini {
+	display: none;
+}
+
+#infoZonemini.active {
+	display: block;
+	position: absolute;
+	bottom: 76px;
+	color: white;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 12px;
+	border-bottom: 1px solid white;
+	
+	h3 {
+		margin: 0;
+	}
+
+	p {
+		display: inline-block;
+		margin: 0 6px;
+	}
+	
+}

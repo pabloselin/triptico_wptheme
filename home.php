@@ -41,7 +41,7 @@ get_header();
                                         $imgurl = $imgs[($i%count($imgs))];
                                         
                                         ?>
-                                            <img src="<?php echo $imgurl;?>" alt="<?php echo $img;?>">
+                                            <img class="lazy" data-src="<?php echo $imgurl;?>" alt="<?php echo $img;?>">
                                         <?php
                                     }?>
                                 </div>

@@ -74,8 +74,13 @@ for (let i = 0; i < buttonExpand.length; i++) {
         let canvasID = buttonExpand[i].getAttribute("data-expand");
         let canvasEl = document.querySelector(`#${canvasID}`);
         let body = document.querySelector("body");
+        let miniInfo = document.querySelector("#infoZonemini");
         console.log(canvasEl);
         canvasEl.classList.toggle("active");
         body.classList.toggle("expandedCanvas");
+
+        if (canvasID === "centerCanvasWidth") {
+            miniInfo.classList.toggle("active");
+        }
     });
 }

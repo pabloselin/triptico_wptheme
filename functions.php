@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.2' );
+	define( '_S_VERSION', '1.2.3' );
 }
 
 if ( ! function_exists( '_s_setup' ) ) :
@@ -143,9 +143,9 @@ function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( '_s-style', 'rtl', 'replace' );
 	wp_enqueue_style('lineicons', 'https://cdn.lineicons.com/3.0/lineicons.css', array(), '3.0');
-
+	wp_enqueue_script('lazyload', 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js', array(), '17.4.0');
 	//wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'triptico_theme_functions', get_template_directory_uri() . '/js/triptico_theme.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'triptico_theme_functions', get_template_directory_uri() . '/js/triptico_theme.js', array('lazyload'), _S_VERSION, true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -153,6 +153,17 @@ function _s_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
+
+add_action('wp_footer', function() {
+	?>
+
+	<script>
+		let triLazyload = new LazyLoad();
+		triLazyload.update();
+	</script>
+
+	<?php
+});
 
 /**
  * Implement the Custom Header feature.
