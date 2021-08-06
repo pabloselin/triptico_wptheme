@@ -57,14 +57,16 @@ menuToggle.addEventListener("click", function () {
 let infoToggle = document.getElementById("infoToggle");
 let infoWindow = document.getElementById("infoZone");
 
-infoToggle.addEventListener("click", function () {
-    infoWindow.classList.toggle("active");
-    if (infoWindow.classList.contains("active")) {
-        infoToggle.innerHTML = "x";
-    } else {
-        infoToggle.innerHTML = "info";
-    }
-});
+if (infoToggle !== null) {
+    infoToggle.addEventListener("click", function () {
+        infoWindow.classList.toggle("active");
+        if (infoWindow.classList.contains("active")) {
+            infoToggle.innerHTML = "x";
+        } else {
+            infoToggle.innerHTML = "info";
+        }
+    });
+}
 
 //Expansor
 let buttonExpand = document.querySelectorAll(".buttonexpand");
@@ -84,3 +86,7 @@ for (let i = 0; i < buttonExpand.length; i++) {
         }
     });
 }
+
+console.log("lazyload");
+let triLazyload = new LazyLoad();
+triLazyload.update();

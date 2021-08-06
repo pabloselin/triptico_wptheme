@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.4' );
+	define( '_S_VERSION', '1.2.5' );
 }
 
 if ( ! function_exists( '_s_setup' ) ) :
@@ -154,16 +154,7 @@ function _s_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
-add_action('wp_footer', function() {
-	?>
 
-	<script>
-		let triLazyload = new LazyLoad();
-		triLazyload.update();
-	</script>
-
-	<?php
-});
 
 /**
  * Implement the Custom Header feature.
