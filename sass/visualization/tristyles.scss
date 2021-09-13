@@ -5,7 +5,7 @@ body {
 }
 
 img:not([src]):not([srcset]) {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .home h1 {
@@ -158,8 +158,6 @@ header.entry-header {
 	}
 }
 
-
-
 .centerzone {
 	width: 60%;
 	display: flex;
@@ -220,8 +218,6 @@ body.expandedCanvas {
 	background-color: transparent;
 }
 
-
-
 #triptico_bottom {
 	width: 100%;
 	height: 50vh;
@@ -263,11 +259,12 @@ body.expandedCanvas {
 	background-color: transparent;
 	background-size: contain;
 	box-shadow: 0 0 3px #333;
-	opacity: .8;
+	opacity: 0.8;
 	transition: all ease-in 0.4s;
 }
 
-.centerimgimg:hover, .centerimgimg.active {
+.centerimgimg:hover,
+.centerimgimg.active {
 	opacity: 1;
 }
 
@@ -321,9 +318,15 @@ body.expandedCanvas {
 	padding: 12px;
 	width: 100%;
 	z-index: 10;
-	.perftitle, .keycountzone {
+	.perftitle,
+	.keycountzone {
 		font-size: 18px;
 	}
+
+	.frase {
+		font-size: 14px;
+	}
+
 	@media screen and (max-width: 768px) {
 		p.perftitle {
 			font-size: 13px;
@@ -377,7 +380,6 @@ div#loading {
 		animation-name: hide;
 		animation-duration: 1s;
 	}
-
 }
 
 @keyframes hide {
@@ -414,12 +416,12 @@ div#loading {
 	height: 36px;
 	cursor: pointer;
 	//background-color: white;
-	
+
 	i {
 		font-size: 24px;
 		color: #ccc;
 		&:hover {
-			color: white
+			color: white;
 		}
 	}
 }
@@ -455,5 +457,28 @@ div#loading {
 	justify-content: center;
 	&:hover {
 		background-color: #555;
+	}
+}
+
+#site-header {
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	h2 {
+		margin-bottom: 0;
+		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 500px;
+		font-size: 14px;
+		&.desc-en {
+			opacity: 0.4;
+			margin-top: 12px;
+		}
+		a {
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+		}
 	}
 }

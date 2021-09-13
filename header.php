@@ -26,7 +26,7 @@
 <?php get_template_part('template-parts/main-nav');?>
 
 <?php if(!is_singular('performance')){?>
-<header>
+<header id="site-header">
     <h1 class="site-title">
 	<?php if(is_page()):?>
 		<?php echo $post->post_title;?>
@@ -36,6 +36,13 @@
 		endif;
 	};?>
 	</h1>
+	
+	<?php if(is_home()):
+		$opciones_triptico_options = get_option( 'opciones_triptico_option_name' );
+		?>
+		<h2 class="desc-es"><?php echo $opciones_triptico_options['descripcin_secundaria_para_pgina_de_inicio_0'];?> <a href="<?php $opciones_triptico_options['link_2']?>">[+]</a></h2>
+		<h2 class="desc-en"><?php echo $opciones_triptico_options['descripcin_secundaria_para_pgina_de_inicio_english_1'];?> <a href="<?php $opciones_triptico_options['link_2']?>">[+]</a></h2>
+	<?php endif;?>
 </header>
 
 <div id="page" class="site">

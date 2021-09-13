@@ -8,15 +8,19 @@
     $epoch = intval(substr($firstfile, 0, 10));
     $date_file = new DateTime("@$epoch");
     $datestart_format = $date_file->format('j F Y - H:i');
-	
+	$frase = get_post_meta($post->ID, '_tri_frase_asociada', true);
 	?>	
 	
 	<p class="perftitle">
 		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo $datestart_format;?></strong>
+		<span class="keycountzone">
+			<span id="keycount"></span> <span id="keyzone"></span>
+		</span>
 	</p>
-	<p class="keycountzone">
-		<span id="keycount"></span> <span id="keyzone"></span>
-	</p>
+	<?php if($frase):?>
+		<p class="frase"><?php echo $frase;?></p>
+	<?php endif;?>
+	
 </div>
 
 <div id="triptico_performance_wrapper">
@@ -27,7 +31,7 @@
 		</canvas>
 		<div id="triptico_canvas_left" class="triptico_box canvasexpander">
 			<div class="infoleft">
-				<strong>Mano izquierda</strong>
+				<strong id="leftColorPicker">Mano izquierda</strong>
 			<div id="infozones_left">
 			</div>
 			</div>
@@ -62,7 +66,7 @@
 		</div>
 		<div id="triptico_canvas_right" class="triptico_box canvasexpander">
 			<div class="inforight">
-				<strong>Mano derecha</strong>
+				<strong id="rightColorPicker">Mano derecha</strong>
 				<div id="infozones_right">
 				</div>
 			</div>
