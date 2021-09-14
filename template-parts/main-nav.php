@@ -32,7 +32,10 @@
 
 <?php if(is_singular('performance')):?>
 	
-	<div id="soundToggle" title="activar audio"><i class="lni lni-volume-mute"></i></div>
+	<?php if(get_post_meta($post->ID, '_tri_picked_audio_files', true)):?>
+		<div id="soundToggle" title="activar audio"><i class="lni lni-volume-mute"></i></div>
+	<?php endif;?>
+	
 	<div id="infoToggle">info</div>
 
 <?php endif;?>

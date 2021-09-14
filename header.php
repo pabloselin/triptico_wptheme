@@ -31,7 +31,7 @@
 	<?php if(is_page()):?>
 		<?php echo $post->post_title;?>
 	<?php else:?>
-			<a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a>
+			<a href="<?php bloginfo('url');?>"><?php bloginfo('name');?> <?php if(is_home()):  echo ' <span> ' . get_bloginfo('description') . '</span>'; endif;?></a>
 			<?php 
 		endif;
 	};?>
@@ -40,8 +40,8 @@
 	<?php if(is_home()):
 		$opciones_triptico_options = get_option( 'opciones_triptico_option_name' );
 		?>
-		<h2 class="desc-es"><?php echo $opciones_triptico_options['descripcin_secundaria_para_pgina_de_inicio_0'];?> <a href="<?php $opciones_triptico_options['link_2']?>">[+]</a></h2>
-		<h2 class="desc-en"><?php echo $opciones_triptico_options['descripcin_secundaria_para_pgina_de_inicio_english_1'];?> <a href="<?php $opciones_triptico_options['link_2']?>">[+]</a></h2>
+		<h2 class="desc-es"><?php echo $opciones_triptico_options['descripcin_secundaria_para_pgina_de_inicio_0'];?> <a href="<?php echo $opciones_triptico_options['link_2']?>">[saber más]</a></h2>
+		<h2 class="desc-en"><?php echo $opciones_triptico_options['descripcin_secundaria_para_pgina_de_inicio_english_1'];?> <a href="<?php echo $opciones_triptico_options['link_2']?>">[know more]</a></h2>
 	<?php endif;?>
 </header>
 
