@@ -32,7 +32,7 @@
 
 <?php if(is_singular('performance')):?>
 	
-	<div id="soundToggle" title="activar audio"><i class="lni lni-volume-high"></i></div>
+	<div id="soundToggle" title="activar audio"><i class="lni lni-volume-mute"></i></div>
 	<div id="infoToggle">info</div>
 
 <?php endif;?>

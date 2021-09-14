@@ -328,6 +328,15 @@ body.expandedCanvas {
 	}
 
 	@media screen and (max-width: 768px) {
+		.frase {
+			position: fixed;
+			text-align: center;
+			width: 100%;
+			top: 0;
+			padding: 6px;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
 		p.perftitle {
 			font-size: 13px;
 			max-width: 200px;
@@ -457,6 +466,12 @@ div#loading {
 	justify-content: center;
 	&:hover {
 		background-color: #555;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+		padding: 1px 6px;
+		right: 120px;
+		width: 34px;
 	}
 }
 

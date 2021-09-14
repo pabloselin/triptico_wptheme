@@ -709,6 +709,16 @@ nav#main-nav.active {
 	background-color: #444;
 }
 
+@media screen and (max-width: 768px) {
+	#infoToggle {
+		right: 80px;
+		width: 36px;
+		text-align: center;
+		font-size: 16px;
+		padding: 1px 3px;
+	}
+}
+
 #menuToggle {
 	position: fixed;
 	bottom: 12px;
@@ -729,6 +739,12 @@ nav#main-nav.active {
 
 #menuToggle span.top {
 	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+	#menuToggle {
+		font-size: 24px;
+	}
 }
 
 #infoZone {
@@ -1415,6 +1431,14 @@ body.expandedCanvas #infoZoneMini {
 }
 
 @media screen and (max-width: 768px) {
+	.triptico_performance_header .frase {
+		position: fixed;
+		text-align: center;
+		width: 100%;
+		top: 0;
+		padding: 6px;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
 	.triptico_performance_header p.perftitle {
 		font-size: 13px;
 		max-width: 200px;
@@ -1535,6 +1559,15 @@ div#loading.hidden {
 
 #soundToggle:hover {
 	background-color: #555;
+}
+
+@media screen and (max-width: 768px) {
+	#soundToggle {
+		font-size: 16px;
+		padding: 1px 6px;
+		right: 120px;
+		width: 34px;
+	}
 }
 
 #site-header {

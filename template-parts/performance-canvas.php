@@ -14,7 +14,7 @@
 	<p class="perftitle">
 		<strong><?php echo $post->post_title;?></strong> - <strong><?php echo $datestart_format;?></strong>
 		<span class="keycountzone">
-			<span id="keycount"></span> <span id="keyzone"></span>
+			<span id="keycount"></span>
 		</span>
 	</p>
 	<?php if($frase):?>
