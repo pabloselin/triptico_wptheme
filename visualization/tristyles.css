@@ -1,133 +1,106 @@
 body {
-	background-color: #111;
-}
+  background-color: #111; }
 
 img:not([src]):not([srcset]) {
-	visibility: hidden;
-}
+  visibility: hidden; }
 
 .home h1 {
-	text-align: center;
-	color: white;
-}
+  text-align: center;
+  color: white; }
 
 .performance-items {
-	display: flex;
-	max-width: 1090px;
-	margin: 12px auto;
-	flex-wrap: wrap;
-}
+  display: flex;
+  max-width: 1090px;
+  margin: 12px auto;
+  flex-wrap: wrap; }
 
 .performance-item-link {
-	padding: 0 0 60px 0;
-	background-color: #111;
-	margin: 6px;
-	width: 350px;
-	height: 260px;
-	position: relative;
-	overflow: hidden;
-}
-
-.performance-item-link a {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 12px;
-}
-
-.performance-item-link .text-info {
-	height: 60px;
-	background-color: #000;
-	color: white;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	padding: 12px;
-}
-
-.performance-item-link .text-info h1 {
-	font-size: 13px;
-	margin: 0;
-	text-align: left;
-}
-
-.performance-item-link .text-info p {
-	margin: 0;
-	padding: 0;
-}
-
-.performance-item-link .imgs {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.performance-item-link img {
-	width: 28px;
-	height: 20px;
-	flex-grow: 4;
-}
-
-.performance-item-link:hover img {
-	opacity: 1;
-}
+  padding: 0 0 60px 0;
+  background-color: #111;
+  margin: 6px;
+  width: 350px;
+  height: 260px;
+  position: relative;
+  overflow: hidden; }
+  .performance-item-link a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px; }
+  .performance-item-link .text-info {
+    height: 60px;
+    background-color: #000;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px; }
+    .performance-item-link .text-info h1 {
+      font-size: 13px;
+      margin: 0;
+      text-align: left; }
+    .performance-item-link .text-info p {
+      margin: 0;
+      padding: 0; }
+  .performance-item-link .imgs {
+    display: flex;
+    flex-wrap: wrap; }
+  .performance-item-link img {
+    width: 28px;
+    height: 20px;
+    flex-grow: 4; }
+  .performance-item-link:hover img {
+    opacity: 1; }
 
 #threeDcanvases {
-	position: relative;
-}
+  position: relative; }
 
 header.entry-header {
-	display: none;
-}
+  display: none; }
 
 .infoleft,
 .inforight {
-	color: #d8d8ed;
-	font-size: 13px;
-	padding: 12px;
-	margin-top: 40px;
-}
+  color: #d8d8ed;
+  font-size: 13px;
+  padding: 12px;
+  margin-top: 40px; }
 
 .inforight {
-	text-align: right;
-}
+  text-align: right; }
 
 .infoleft p,
 .inforight p {
-	margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 #triptico_canvas {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	display: block;
-	z-index: -1;
-}
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1; }
 
 #triptico_performance_wrapper {
-	margin-top: 36px;
-}
+  margin-top: 36px; }
 
 #triptico_performance_visualization {
-	display: flex;
-	flex-wrap: wrap;
-	flex-grow: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100%;
-	align-items: flex-start;
-	justify-content: flex-start;
-}
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start; }
 
 /*
 .triptico_box {
@@ -135,374 +108,288 @@ header.entry-header {
 	height: 80vh;
 }*/
 #triptico_canvas_left {
-	width: 20%;
-	height: 100%;
-}
-
-#triptico_canvas_left.active {
-	width: 100%;
-}
-
-#triptico_canvas_left.active .buttonexpand {
-	bottom: 72px;
-}
+  width: 20%;
+  height: 100%; }
+  #triptico_canvas_left.active {
+    width: 100%; }
+    #triptico_canvas_left.active .buttonexpand {
+      bottom: 72px; }
 
 #triptico_canvas_right {
-	width: 20%;
-	height: 100%;
-}
-
-#triptico_canvas_right.active {
-	width: 100%;
-}
+  width: 20%;
+  height: 100%; }
+  #triptico_canvas_right.active {
+    width: 100%; }
 
 .centerzone {
-	width: 60%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.centerzone.active {
-	width: 100%;
-}
-
-.centerzone.active #threeDcanvases {
-	top: 0;
-	height: 100vh;
-	position: absolute;
-}
-
-.centerzone.active #threeDcanvases .buttonexpand {
-	bottom: 72px;
-}
-
-.centerzone.active #threeDcanvases #triptico_canvas_3d {
-	height: 100vh;
-}
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap; }
+  .centerzone.active {
+    width: 100%; }
+    .centerzone.active #threeDcanvases {
+      top: 0;
+      height: 100vh;
+      position: absolute; }
+      .centerzone.active #threeDcanvases .buttonexpand {
+        bottom: 72px; }
+      .centerzone.active #threeDcanvases #triptico_canvas_3d {
+        height: 100vh; }
 
 body.expandedCanvas .canvasexpander:not(.active) {
-	display: none;
-}
+  display: none; }
 
 body.expandedCanvas #infoZoneMini {
-	bottom: 40px;
-	width: 100%;
-	height: 40px;
-	padding: 6px;
-}
+  bottom: 40px;
+  width: 100%;
+  height: 40px;
+  padding: 6px; }
 
 #threeDcanvases {
-	height: 50vh;
-	width: 100%;
-}
+  height: 50vh;
+  width: 100%; }
 
 #triptico_canvas_3d {
-	width: 100%;
-	height: 50vh;
-	opacity: 1;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-color: transparent;
-}
+  width: 100%;
+  height: 50vh;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent; }
 
 #triptico_canvas_3d_overlay {
-	width: 70%;
-	height: 50vh;
-	opacity: 1;
-	position: absolute;
-	right: 0;
-	top: 0;
-	background-color: transparent;
-}
+  width: 70%;
+  height: 50vh;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent; }
 
 #triptico_bottom {
-	width: 100%;
-	height: 50vh;
-}
+  width: 100%;
+  height: 50vh; }
 
 #triptico_canvas_rug {
-	width: 100%;
-	height: 38vh;
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-#triptico_canvas_rug .buttonexpand {
-	bottom: 72px;
-}
-
-#triptico_canvas_rug.active {
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
+  width: 100%;
+  height: 38vh;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  #triptico_canvas_rug .buttonexpand {
+    bottom: 72px; }
+  #triptico_canvas_rug.active {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 #centerimg {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .centerimgimg {
-	width: 200px;
-	height: 150px;
-	background-color: transparent;
-	background-size: contain;
-	box-shadow: 0 0 3px #333;
-	opacity: 0.8;
-	transition: all ease-in 0.4s;
-}
+  width: 200px;
+  height: 150px;
+  background-color: transparent;
+  background-size: contain;
+  box-shadow: 0 0 3px #333;
+  opacity: 0.8;
+  transition: all ease-in 0.4s; }
 
 .centerimgimg:hover,
 .centerimgimg.active {
-	opacity: 1;
-}
+  opacity: 1; }
 
 #bottomimgs {
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 40px;
-	display: flex;
-	justify-content: space-between;
-}
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between; }
 
 #bottomimgs img {
-	width: 40px;
-	height: auto;
-}
+  width: 40px;
+  height: auto; }
 
 #bottomimgs img.active {
-	border: 1px solid white;
-	opacity: 0.8;
-	background-color: white;
-}
+  border: 1px solid white;
+  opacity: 0.8;
+  background-color: white; }
 
 #triptico_squares {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: transparent;
-	opacity: 1;
-}
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  opacity: 1; }
 
 #triptico_canvas_rug_right {
-	width: 50%;
-	height: 40vh;
-	background-color: transparent;
-}
+  width: 50%;
+  height: 40vh;
+  background-color: transparent; }
 
 #triptico_canvas_rug img {
-	max-height: 100%;
-	width: auto;
-	margin: 0 auto;
-}
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto; }
 
 .triptico_performance_header {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-	padding: 12px;
-	width: 100%;
-	z-index: 10;
-}
-
-.triptico_performance_header .perftitle,
-.triptico_performance_header .keycountzone {
-	font-size: 18px;
-}
-
-.triptico_performance_header .frase {
-	font-size: 14px;
-}
-
-@media screen and (max-width: 768px) {
-	.triptico_performance_header .frase {
-		position: fixed;
-		text-align: center;
-		width: 100%;
-		top: 0;
-		padding: 6px;
-		background-color: rgba(0, 0, 0, 0.8);
-	}
-	.triptico_performance_header p.perftitle {
-		font-size: 13px;
-		max-width: 200px;
-	}
-	.triptico_performance_header .keycountzone {
-		font-size: 12px;
-	}
-}
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px;
+  width: 100%;
+  z-index: 10; }
+  .triptico_performance_header .perftitle,
+  .triptico_performance_header .keycountzone {
+    font-size: 18px; }
+  .triptico_performance_header .frase {
+    font-size: 14px; }
+  @media screen and (max-width: 768px) {
+    .triptico_performance_header .frase {
+      position: fixed;
+      text-align: center;
+      width: 100%;
+      top: 0;
+      padding: 6px;
+      background-color: rgba(0, 0, 0, 0.8); }
+    .triptico_performance_header p.perftitle {
+      font-size: 13px;
+      max-width: 200px; }
+    .triptico_performance_header .keycountzone {
+      font-size: 12px; } }
 
 .triptico_performance_header h1 {
-	margin: 0;
-	font-weight: normal;
-	display: inline-block;
-}
+  margin: 0;
+  font-weight: normal;
+  display: inline-block; }
 
 .triptico_performance_header p {
-	margin: 0;
-}
+  margin: 0; }
 
 div#loading {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	z-index: 10000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-div#loading p {
-	animation-name: bounce;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	color: white;
-	font-size: 48px;
-}
-
-div#loading.hidden {
-	display: none;
-	opacity: 0;
-	top: -100%;
-	left: -100%;
-	animation-name: hide;
-	animation-duration: 1s;
-}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  div#loading p {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: white;
+    font-size: 48px; }
+  div#loading.hidden {
+    display: none;
+    opacity: 0;
+    top: -100%;
+    left: -100%;
+    animation-name: hide;
+    animation-duration: 1s; }
 
 @keyframes hide {
-	from {
-		top: 0;
-	}
-	to {
-		top: -100%;
-		opacity: 0;
-	}
-}
+  from {
+    top: 0; }
+  to {
+    top: -100%;
+    opacity: 0; } }
 
 @keyframes bounce {
-	from {
-		transform: scale(1.4);
-		opacity: 0.4;
-	}
-	to {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
+  from {
+    transform: scale(1.4);
+    opacity: 0.4; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
 
 .buttonexpand {
-	display: block;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 36px;
-	height: 36px;
-	cursor: pointer;
-}
-
-.buttonexpand i {
-	font-size: 24px;
-	color: #ccc;
-}
-
-.buttonexpand i:hover {
-	color: white;
-}
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer; }
+  .buttonexpand i {
+    font-size: 24px;
+    color: #ccc; }
+    .buttonexpand i:hover {
+      color: white; }
 
 #triptico_canvas_left .buttonexpand {
-	bottom: 72px;
-	left: 6px;
-}
+  bottom: 72px;
+  left: 6px; }
 
 #triptico_canvas_right .buttonexpand {
-	bottom: 72px;
-}
+  bottom: 72px; }
 
 #soundToggle {
-	bottom: 18px;
-	right: 164px;
-	position: fixed;
-	color: white;
-	cursor: pointer;
-	z-index: 100;
-	font-size: 18px;
-	width: 48px;
-	height: 32px;
-	padding: 12px;
-	border: 1px solid white;
-	border-radius: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#soundToggle:hover {
-	background-color: #555;
-}
-
-@media screen and (max-width: 768px) {
-	#soundToggle {
-		font-size: 16px;
-		padding: 1px 6px;
-		right: 120px;
-		width: 34px;
-	}
-}
+  bottom: 18px;
+  right: 164px;
+  position: fixed;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 18px;
+  width: 48px;
+  height: 32px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #soundToggle:hover {
+    background-color: #555; }
+  @media screen and (max-width: 768px) {
+    #soundToggle {
+      font-size: 16px;
+      padding: 1px 6px;
+      right: 120px;
+      width: 34px; } }
 
 #site-header {
-	text-align: center;
-	color: white;
-	font-size: 14px;
-}
-
-#site-header h1 {
-	line-height: 1em;
-}
-
-#site-header h1 span {
-	display: block;
-	font-size: 15px;
-	color: #ccc;
-	line-height: 1.2em;
-}
-
-#site-header h2 {
-	margin-bottom: 0;
-	margin-top: 0;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 500px;
-	font-size: 16px;
-}
-
-#site-header h2.desc-en {
-	opacity: 0.4;
-	margin-top: 12px;
-}
-
-#site-header h2 a {
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-/*# sourceMappingURL=tristyles.css.map */
+  text-align: center;
+  color: white;
+  font-size: 14px; }
+  #site-header h1 {
+    line-height: 1em; }
+    #site-header h1 span {
+      display: block;
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.2em; }
+  #site-header h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    font-size: 16px; }
+    #site-header h2.desc-en {
+      opacity: 0.4;
+      margin-top: 12px; }
+    #site-header h2 a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none; }
