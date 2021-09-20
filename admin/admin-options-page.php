@@ -73,6 +73,14 @@ class OpcionesTriptico {
 		);
 
 		add_settings_field(
+			'id_pagina_no_encontrada', // id
+			'ID de la página no encontrada', // title
+			array( $this, 'id_pagina_no_encontrada_callback' ), // callback
+			'opciones-triptico-admin', // page
+			'opciones_triptico_setting_section' // section
+		);
+
+		add_settings_field(
 			'link_2', // id
 			'Link', // title
 			array( $this, 'link_2_callback' ), // callback
@@ -89,6 +97,10 @@ class OpcionesTriptico {
 
 		if ( isset( $input['descripcin_secundaria_para_pgina_de_inicio_english_1'] ) ) {
 			$sanitary_values['descripcin_secundaria_para_pgina_de_inicio_english_1'] = esc_textarea( $input['descripcin_secundaria_para_pgina_de_inicio_english_1'] );
+		}
+
+		if( isset( $input['id_pagina_no_encontrada']) ) {
+			$sanitary_values['id_pagina_no_encontrada'] = sanitize_text_field( $input['id_pagina_no_encontrada']);
 		}
 
 		if ( isset( $input['link_2'] ) ) {
@@ -120,6 +132,13 @@ class OpcionesTriptico {
 		printf(
 			'<input class="regular-text" type="text" name="opciones_triptico_option_name[link_2]" id="link_2" value="%s">',
 			isset( $this->opciones_triptico_options['link_2'] ) ? esc_attr( $this->opciones_triptico_options['link_2']) : ''
+		);
+	}
+
+	public function id_pagina_no_encontrada_callback() {
+		printf(
+			'<input class="regular-text" type="text" name="opciones_triptico_option_name[id_pagina_no_encontrada]" id="id_pagina_no_encontrada" value="%s">',
+			isset( $this->opciones_triptico_options['id_pagina_no_encontrada'] ) ? esc_attr( $this->opciones_triptico_options['id_pagina_no_encontrada']) : ''
 		);
 	}
 

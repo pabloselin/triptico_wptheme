@@ -5,9 +5,9 @@
 	$dateend = get_post_meta($post->ID, '_tri_end_perfo', true);
 	$duracion = get_post_meta($post->ID, '_tri_length_perfo', true);
 	$firstfile = get_post_meta($post->ID, '_tri_picked_sensor_files_left', true)[0];
-    $epoch = intval(substr($firstfile, 0, 10));
-    $date_file = new DateTime("@$epoch");
-    $datestart_format = $date_file->format('j F Y - H:i');
+	$epoch = intval(substr($firstfile, 0, 10));
+	$date_file = new DateTime("@$epoch");
+	$datestart_format = $date_file->format('j F Y - H:i');
 	$frase = get_post_meta($post->ID, '_tri_frase_asociada', true);
 	?>	
 	
@@ -32,11 +32,11 @@
 		<div id="triptico_canvas_left" class="triptico_box canvasexpander">
 			<div class="infoleft">
 				<strong id="leftColorPicker">Mano izquierda</strong>
-			<div id="infozones_left">
-			</div>
+				<div id="infozones_left">
+				</div>
 			</div>
 			<span class="buttonexpand" data-expand="triptico_canvas_left">
-					<i class="lni lni-frame-expand"></i>
+				<i class="lni lni-frame-expand"></i>
 			</span>
 		</div>
 		<div class="centerzone canvasexpander" id="centerCanvasWidth">
@@ -58,20 +58,21 @@
 				<!-- <span class="buttonexpand" data-expand="triptico_canvas_rug">
 					<i class="lni lni-frame-expand"></i>
 				</span> -->
-					
-				</div>
-				<div id="bottomimgs"></div>
-				
+
 			</div>
-		</div>
-		<div id="triptico_canvas_right" class="triptico_box canvasexpander">
-			<div class="inforight">
-				<strong id="rightColorPicker">Mano derecha</strong>
-				<div id="infozones_right">
-				</div>
-			</div>
-			<span class="buttonexpand" data-expand="triptico_canvas_right">
-					<i class="lni lni-frame-expand"></i>
-			</span>
+			<div id="bottomimgs"></div>
+
 		</div>
 	</div>
+	<div id="triptico_canvas_right" class="triptico_box canvasexpander">
+		<div class="inforight">
+			<strong id="rightColorPicker">Mano derecha</strong>
+			<div id="infozones_right">
+			</div>
+		</div>
+		<span class="buttonexpand" data-expand="triptico_canvas_right">
+			<i class="lni lni-frame-expand"></i>
+		</span>
+	</div>
+
+</div>

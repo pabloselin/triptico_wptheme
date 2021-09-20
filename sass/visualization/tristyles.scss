@@ -80,6 +80,17 @@ img:not([src]):not([srcset]) {
 	}
 }
 
+a.wp-block-file__button {
+	display: block;
+	font-weight: bold;
+	border: none;
+	max-width: 200px;
+	margin: 12px 0 !important;
+	&:hover {
+		border: none;
+	}
+}
+
 #threeDcanvases {
 	position: relative;
 }
@@ -504,5 +515,114 @@ div#loading {
 			font-weight: bold;
 			text-decoration: none;
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#triptico_canvas {
+	}
+
+	#triptico_canvas_rug {
+		height: 32vh;
+		margin-top: 12px;
+	}
+
+	#threeDcanvases {
+		// height: auto;
+		// min-height: 50vh;
+	}
+
+	#triptico_performance_visualization {
+		// height: auto;
+		// min-height: 100vh;
+		//position: relative;
+	}
+
+	#triptico_canvas {
+		//position: relative;
+	}
+
+	#triptico_bottom {
+		//display: none;
+	}
+
+	.infoleft,
+	.inforight {
+		margin-top: 0;
+		padding: 0;
+		font-size: 12px;
+		width: 320px;
+		overflow: hidden;
+		position: absolute;
+		p,
+		div {
+			display: inline-block;
+			margin: 0;
+		}
+		p {
+			width: 120px;
+			height: 1.5em;
+			overflow: hidden;
+			text-align: left;
+		}
+		strong {
+			display: block;
+			margin: 0;
+		}
+	}
+
+	.infoleft {
+		transform: rotate(-90deg);
+		left: -138px;
+		top: 112px;
+		//margin: 106px 0 0 -80px;
+	}
+
+	.inforight {
+		transform: rotate(90deg);
+		right: -138px;
+		top: 112px;
+		//margin: 106px -54px 0 0;
+	}
+
+	.centerzone {
+		//order: 1;
+		//width: 100%;
+		// margin-bottom: 24px;
+	}
+
+	#threeDcanvases {
+		//margin-bottom: 24px;
+	}
+
+	#triptico_canvas_left {
+		//order: 2;
+		//left: 0;
+	}
+
+	#triptico_canvas_right {
+		//order: 3;
+		//right: 0;
+	}
+
+	#triptico_canvas_left,
+	#triptico_canvas_right {
+		//width: 50%;
+		//position: absolute;
+		//margin-top: 50vh;
+		//height: 300px;
+	}
+
+	#triptico_bottom_mobile {
+		// display: block;
+		// height: 50vh;
+		// background-color: #ccc;
+		// position: absolute;
+		// bottom: 0;
+		// width: 100%;
+	}
+
+	.infoleft,
+	.inforight {
 	}
 }
