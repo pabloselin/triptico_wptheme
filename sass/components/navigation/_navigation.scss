@@ -143,6 +143,12 @@ nav#main-nav.active {
 	background-color: rgba(0, 0, 0, 0.8);
 	padding: 12px;
 	border-bottom: 1px solid white;
+	@media screen and (max-width: 768px) {
+		padding: 6px;
+		h3 {
+			display: none;
+		}
+	}
 
 	h3 {
 		margin: 0;
@@ -151,5 +157,8 @@ nav#main-nav.active {
 	p {
 		display: inline-block;
 		margin: 0 6px;
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+		}
 	}
 }

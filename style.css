@@ -787,6 +787,15 @@ nav#main-nav.active {
 	border-bottom: 1px solid white;
 }
 
+@media screen and (max-width: 768px) {
+	#infoZonemini.active {
+		padding: 6px;
+	}
+	#infoZonemini.active h3 {
+		display: none;
+	}
+}
+
 #infoZonemini.active h3 {
 	margin: 0;
 }
@@ -794,6 +803,12 @@ nav#main-nav.active {
 #infoZonemini.active p {
 	display: inline-block;
 	margin: 0 6px;
+}
+
+@media screen and (max-width: 768px) {
+	#infoZonemini.active p {
+		font-size: 14px;
+	}
 }
 
 /* Posts and pages
