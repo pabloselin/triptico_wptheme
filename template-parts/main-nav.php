@@ -25,7 +25,7 @@
 		<h3><i class="lni lni-mobile"></i> Controles móviles</h3>
 		<p><strong>Arrastrar con un dedo: </strong> Rotar visualización central</p>
 		<p><strong>Arrastrar con dos dedos: </strong> Mover visualización central</p>
-		<p><strong>Pinchar con dos dedos: </strong> Zoom en visualización central</p>
+		<p><strong>Zoom con dos dedos: </strong> Zoom en visualización central</p>
 	</div>
 </div>
 
@@ -40,7 +40,7 @@
 		<h3><i class="lni lni-mobile"></i> Controles móviles</h3>
 		<p><strong>Arrastrar con un dedo: </strong> Rotar visualización central</p>
 		<p><strong>Arrastrar con dos dedos: </strong> Mover visualización central</p>
-		<p><strong>Pinchar con dos dedos: </strong> Zoom en visualización central</p>
+		<p><strong>Zoom con dos dedos: </strong> Zoom en visualización central</p>
 	</div>
 </div>
 
