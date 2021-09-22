@@ -26,6 +26,9 @@
 <div id="triptico_performance_wrapper">
 	<div id="loading"><p>...</p></div>
 	<div id="triptico_performance_visualization">
+		<span class="buttonexpand buttonexpand-mobile" data-expand="centerCanvasWidth">
+					<i class="lni lni-frame-expand"></i>
+				</span>
 		<canvas id="triptico_canvas">
 			
 		</canvas>

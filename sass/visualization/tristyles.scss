@@ -130,6 +130,9 @@ header.entry-header {
 
 #triptico_performance_wrapper {
 	margin-top: 36px;
+	@media screen and (max-width: 768px) {
+		min-height: 100vh;
+	}
 }
 
 #triptico_performance_visualization {
@@ -344,6 +347,7 @@ body.expandedCanvas {
 			text-align: center;
 			width: 100%;
 			top: 0;
+			left: 0;
 			padding: 6px;
 			background-color: rgba(0, 0, 0, 0.8);
 		}
@@ -446,6 +450,19 @@ div#loading {
 	}
 }
 
+.buttonexpand-mobile {
+	display: none;
+	@media screen and (max-width: 768px) {
+		display: block;
+		top: 45vh;
+		right: 20%;
+		z-index: 100;
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
 #triptico_canvas_left {
 	.buttonexpand {
 		bottom: 72px;
@@ -528,8 +545,19 @@ div#loading {
 	}
 
 	#threeDcanvases {
-		// height: auto;
-		// min-height: 50vh;
+		.buttonexpand {
+			display: none;
+		}
+	}
+
+	body.expandedCanvas .buttonexpand-mobile {
+		bottom: 76px;
+		right: 0;
+		top: auto;
+	}
+
+	body.expandedCanvas #bottomimgs {
+		display: none;
 	}
 
 	#triptico_performance_visualization {

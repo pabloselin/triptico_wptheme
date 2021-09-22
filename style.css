@@ -1230,6 +1230,12 @@ header.entry-header {
 	margin-top: 36px;
 }
 
+@media screen and (max-width: 768px) {
+	#triptico_performance_wrapper {
+		min-height: 100vh;
+	}
+}
+
 #triptico_performance_visualization {
 	display: flex;
 	flex-wrap: wrap;
@@ -1448,6 +1454,7 @@ body.expandedCanvas #infoZoneMini {
 		text-align: center;
 		width: 100%;
 		top: 0;
+		left: 0;
 		padding: 6px;
 		background-color: rgba(0, 0, 0, 0.8);
 	}
@@ -1542,6 +1549,22 @@ div#loading.hidden {
 	color: white;
 }
 
+.buttonexpand-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.buttonexpand-mobile {
+		display: block;
+		top: 45vh;
+		right: 20%;
+		z-index: 100;
+	}
+	.buttonexpand-mobile.hidden {
+		display: none;
+	}
+}
+
 #triptico_canvas_left .buttonexpand {
 	bottom: 72px;
 	left: 6px;
@@ -1623,6 +1646,17 @@ div#loading.hidden {
 	#triptico_canvas_rug {
 		height: 32vh;
 		margin-top: 12px;
+	}
+	#threeDcanvases .buttonexpand {
+		display: none;
+	}
+	body.expandedCanvas .buttonexpand-mobile {
+		bottom: 76px;
+		right: 0;
+		top: auto;
+	}
+	body.expandedCanvas #bottomimgs {
+		display: none;
 	}
 	.infoleft,
 	.inforight {

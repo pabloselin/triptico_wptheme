@@ -70,19 +70,24 @@ if (infoToggle !== null) {
 
 //Expansor
 let buttonExpand = document.querySelectorAll(".buttonexpand");
+let mobileExpand = document.querySelector(".buttonexpand-mobile");
+console.log(mobileExpand);
 
 for (let i = 0; i < buttonExpand.length; i++) {
     buttonExpand[i].addEventListener("click", function (e) {
         let canvasID = buttonExpand[i].getAttribute("data-expand");
         let canvasEl = document.querySelector(`#${canvasID}`);
+
         let body = document.querySelector("body");
         let miniInfo = document.querySelector("#infoZonemini");
-        console.log(canvasEl);
         canvasEl.classList.toggle("active");
+        buttonExpand[i].classList.toggle("pressed");
         body.classList.toggle("expandedCanvas");
 
         if (canvasID === "centerCanvasWidth") {
             miniInfo.classList.toggle("active");
+        } else {
+            mobileExpand.classList.toggle("hidden");
         }
     });
 }
