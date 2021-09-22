@@ -456,7 +456,7 @@ div#loading.hidden {
 		display: block;
 		top: 45vh;
 		right: 20%;
-		z-index: 100;
+		z-index: 90;
 	}
 	.buttonexpand-mobile.hidden {
 		display: none;

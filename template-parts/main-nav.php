@@ -11,7 +11,7 @@
 </nav>
 
 <div id="infoZone">
-	<div>
+	<div class="desktop">
 		<h2>Cómo usar la visualización</h2>
 		<p><i class="lni lni-frame-expand"></i> Expandir visualización</p>
 		<h3><i class="lni lni-mouse"></i> Controles de mouse</h3>
@@ -19,14 +19,28 @@
 		<p><strong>Click derecho y arrastrar: </strong> Mover visualización central</p>
 		<p><strong>Scroll (ruedita del mouse o trackpad): </strong> Zoom en visualización central</p>
 	</div>
+	<div class="mobile">
+		<h2>Cómo usar la visualización</h2>
+		<p><i class="lni lni-frame-expand"></i> Expandir visualización</p>
+		<h3><i class="lni lni-mobile"></i> Controles móviles</h3>
+		<p><strong>Arrastrar con un dedo: </strong> Rotar visualización central</p>
+		<p><strong>Arrastrar con dos dedos: </strong> Mover visualización central</p>
+		<p><strong>Pinchar con dos dedos: </strong> Zoom en visualización central</p>
+	</div>
 </div>
 
 <div id="infoZonemini">
-	<div>
+	<div class="desktop">
 		<h3><i class="lni lni-mouse"></i> Controles de mouse</h3>
 		<p><strong>Click izquierdo y arrastrar: </strong> Rotar visualización central</p>
 		<p><strong>Click derecho y arrastrar: </strong> Mover visualización central</p>
 		<p><strong>Scroll (ruedita del mouse o trackpad): </strong> Zoom en visualización central</p>
+	</div>
+	<div class="mobile">
+		<h3><i class="lni lni-mobile"></i> Controles móviles</h3>
+		<p><strong>Arrastrar con un dedo: </strong> Rotar visualización central</p>
+		<p><strong>Arrastrar con dos dedos: </strong> Mover visualización central</p>
+		<p><strong>Pinchar con dos dedos: </strong> Zoom en visualización central</p>
 	</div>
 </div>
 

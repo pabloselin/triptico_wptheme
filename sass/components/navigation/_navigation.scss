@@ -127,6 +127,17 @@ nav#main-nav.active {
 	&.active {
 		top: 0;
 		opacity: 1;
+		.mobile {
+			display: none;
+		}
+		@media screen and (max-width: 768px) {
+			.desktop {
+				display: none;
+			}
+			.mobile {
+				display: block;
+			}
+		}
 	}
 }
 
@@ -143,10 +154,21 @@ nav#main-nav.active {
 	background-color: rgba(0, 0, 0, 0.8);
 	padding: 12px;
 	border-bottom: 1px solid white;
+
+	.mobile {
+		display: none;
+	}
+
 	@media screen and (max-width: 768px) {
 		padding: 6px;
-		h3 {
+		.desktop {
 			display: none;
+		}
+		.mobile {
+			display: block;
+		}
+		h3 {
+			//display: none;
 		}
 	}
 

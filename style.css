@@ -772,6 +772,19 @@ nav#main-nav.active {
 	opacity: 1;
 }
 
+#infoZone.active .mobile {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	#infoZone.active .desktop {
+		display: none;
+	}
+	#infoZone.active .mobile {
+		display: block;
+	}
+}
+
 #infoZonemini {
 	display: none;
 }
@@ -787,12 +800,19 @@ nav#main-nav.active {
 	border-bottom: 1px solid white;
 }
 
+#infoZonemini.active .mobile {
+	display: none;
+}
+
 @media screen and (max-width: 768px) {
 	#infoZonemini.active {
 		padding: 6px;
 	}
-	#infoZonemini.active h3 {
+	#infoZonemini.active .desktop {
 		display: none;
+	}
+	#infoZonemini.active .mobile {
+		display: block;
 	}
 }
 
@@ -1573,7 +1593,7 @@ div#loading.hidden {
 		display: block;
 		top: 45vh;
 		right: 20%;
-		z-index: 100;
+		z-index: 90;
 	}
 	.buttonexpand-mobile.hidden {
 		display: none;
