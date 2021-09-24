@@ -28,6 +28,10 @@ img:not([src]):not([srcset]) {
 	height: 260px;
 	position: relative;
 	overflow: hidden;
+	@media screen and (max-width: 768px) {
+		max-width: 300px;
+		margin: 6px auto;
+	}
 
 	a {
 		position: absolute;
@@ -523,9 +527,16 @@ div#loading {
 		margin-right: auto;
 		max-width: 650px;
 		font-size: 16px;
+
 		&.desc-en {
 			opacity: 0.4;
 			margin-top: 12px;
+		}
+
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+			margin: 0 12px;
+			line-height: 1.3em;
 		}
 		a {
 			color: white;

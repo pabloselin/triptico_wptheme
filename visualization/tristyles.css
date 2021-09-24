@@ -28,6 +28,13 @@ img:not([src]):not([srcset]) {
 	overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+	.performance-item-link {
+		max-width: 300px;
+		margin: 6px auto;
+	}
+}
+
 .performance-item-link a {
 	position: absolute;
 	left: 0;
@@ -532,6 +539,14 @@ div#loading.hidden {
 #site-header h2.desc-en {
 	opacity: 0.4;
 	margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+	#site-header h2 {
+		font-size: 14px;
+		margin: 0 12px;
+		line-height: 1.3em;
+	}
 }
 
 #site-header h2 a {
